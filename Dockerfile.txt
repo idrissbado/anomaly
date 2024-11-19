@@ -1,0 +1,25 @@
+# Use the official Python image as a base
+FROM python:3.10-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements and source files
+COPY . /app
+
+# Install the dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port for the Flask application
+EXPOSE 5000
+
+# Set environment variables (configure them based on your setup)
+ENV FLASK_ENV=development
+ENV DB_NAME=mobilemoneydb
+ENV DB_USER=idrissolivier_bado
+ENV DB_PASSWORD=GoMfIdUfP9M7ptgx
+ENV DB_HOST=10.222.240.10
+ENV DB_PORT=3306
+
+# Command to run the Flask app
+CMD ["python", "app.py"]

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DB_NAME=mobilemoneydb
+      - DB_USER=idrissolivier_bado
+      - DB_PASSWORD=GoMfIdUfP9M7ptgx
+      - DB_HOST=10.222.240.10
+      - DB_PORT=3306

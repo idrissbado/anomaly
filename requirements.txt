@@ -1,0 +1,5 @@
+Flask
+psycopg2
+pandas
+scikit-learn
+mysql-connector-python
